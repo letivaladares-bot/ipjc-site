@@ -157,11 +157,12 @@
        ## Subtítulo · ### Título menor · > Citação · - item · 1. item · ---
        [destaque] texto · [centro] texto · [espaço]
        **negrito** · *itálico* · ==marca-texto== · [texto](https://link)
-       {sans}Poppins{/sans} · {manuscrita}Caveat{/manuscrita}  (só fontes da identidade) */
+       {serif}Source Serif 4{/serif} · {sans}Poppins{/sans} · {manuscrita}Caveat{/manuscrita}  (só fontes da identidade) */
   function formatarTexto(texto) {
     function inline(t) {
       return t
         .replace(/\{sans\}([\s\S]+?)\{\/sans\}/g, '<span class="txt-sans">$1</span>')
+        .replace(/\{serif\}([\s\S]+?)\{\/serif\}/g, '<span class="txt-serif">$1</span>')
         .replace(/\{manuscrita\}([\s\S]+?)\{\/manuscrita\}/g, '<span class="txt-manuscrita">$1</span>')
         .replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>')
         .replace(/\*(.+?)\*/g, '<em>$1</em>')
@@ -402,10 +403,10 @@
   /* Equaliza o tamanho visual de logos com proporções diferentes: mantém a
      área aproximadamente constante (logos largas ficam mais baixas, as altas,
      mais estreitas), dentro dos limites do espaço do card. */
-  function ajustarLogo(img) {
+  function ajustarLogo(img, area, altMax, largMax) {
     var r = img.naturalWidth / img.naturalHeight;
     if (!r) return;
-    var area = 6200, altMax = 84, largMax = 170;
+    area = area || 6200; altMax = altMax || 84; largMax = largMax || 170;
     var h = Math.min(altMax, Math.sqrt(area / r), largMax / r);
     img.style.height = Math.round(h) + 'px';
     img.style.width = 'auto';

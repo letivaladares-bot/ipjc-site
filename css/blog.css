@@ -97,6 +97,7 @@
   background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='12' viewBox='0 0 40 12'%3E%3Cpath d='M0 6q5-6 10 0t10 0 10 0 10 0' fill='none' stroke='%23C49A3C' stroke-width='1.6'/%3E%3C/svg%3E") center / 40px 12px repeat-x; }
 .post-texto mark { background: linear-gradient(transparent 55%, rgba(196, 154, 60, .35) 55%); color: inherit; padding: 0 .1em; }
 .post-texto .txt-sans { font-family: var(--f-sans); font-size: .92em; }
+.post-texto .txt-serif { font-family: var(--f-serif); }
 .post-texto .txt-manuscrita { font-family: var(--f-script); font-size: 1.35em; line-height: 1.2; color: var(--tema, var(--verde)); }
 .post-texto .txt-centro { text-align: center; }
 .post-texto .txt-espaco { height: 2.4em; }

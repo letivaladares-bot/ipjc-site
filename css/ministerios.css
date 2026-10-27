@@ -71,7 +71,7 @@
 }
 .subcard:hover { transform: translateY(-4px); box-shadow: var(--sombra-hover); }
 .subcard-logo { height: 92px; display: flex; align-items: center; margin-bottom: 10px; }
-.subcard-logo img { max-height: 100%; max-width: 70%; width: auto; object-fit: contain; }
+.subcard-logo img { max-height: 100%; max-width: 100%; width: auto; object-fit: contain; }
 .subcard h3 { font-size: 1.35rem; margin: 0; }
 .subcard p { margin: 0; color: var(--cinza-600); font-size: .95rem; }
 

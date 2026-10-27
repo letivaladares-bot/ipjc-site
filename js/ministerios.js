@@ -130,7 +130,7 @@
           '<div class="subcards" data-stagger>' + m.subcards.map(function (sc) {
             var tag = sc.href ? 'a' : 'article';
             return '<' + tag + ' class="subcard' + (sc.href ? ' subcard--link' : '') + '"' + (sc.href ? ' href="' + esc(sc.href) + '"' : '') + '>' +
-              (sc.logo ? '<div class="subcard-logo"><img src="' + esc(sc.logo) + '" alt="' + esc(sc.titulo) + '" loading="lazy"></div>' : '') +
+              (sc.logo ? '<div class="subcard-logo"><img src="' + esc(sc.logo) + '" alt="' + esc(sc.titulo) + '" loading="lazy" onload="IPJCSite.ajustarLogo(this, 8000, 92, 210)"></div>' : '') +
               '<h3>' + esc(sc.titulo) + '</h3><p>' + esc(sc.texto) + '</p>' +
               (sc.href ? '<span class="link-seta">Conhecer ' + S.icon('seta') + '</span>' : '') +
             '</' + tag + '>';

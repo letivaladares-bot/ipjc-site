@@ -309,7 +309,7 @@
           : '<button type="button" data-ed="' + b[0] + '" title="' + b[2] + '" aria-label="' + b[2] + '">' + b[1] + '</button>';
       }).join('') +
       '<label class="adm-barra-fonte">Fonte <select data-ed-fonte aria-label="Fonte do trecho selecionado">' +
-        '<option value="">Escolher…</option><option value="sans">Poppins (sem serifa)</option><option value="manuscrita">Caveat (manuscrita)</option>' +
+        '<option value="">Escolher…</option><option value="serif">Source Serif 4 (serifada)</option><option value="sans">Poppins (sem serifa)</option><option value="manuscrita">Caveat (manuscrita)</option>' +
       '</select></label>' +
       '<button type="button" class="adm-barra-previa" data-ed="previa" aria-pressed="false">Pré-visualizar</button>' +
     '</div>';
