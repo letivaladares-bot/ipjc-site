@@ -1,0 +1,43 @@
+/* ==========================================================================
+   IPJC v3 — Pequenos Grupos de Discipulado
+   ========================================================================== */
+.pg-hero-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 32px; }
+
+.pg-pilares-sec { padding-top: clamp(40px, 6vw, 64px); }
+.pg-pilares { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 1fr; gap: 16px; }
+@media (max-width: 1000px) { .pg-pilares { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 520px) { .pg-pilares { grid-template-columns: 1fr; grid-auto-rows: auto; } }
+.pg-pilares li { display: flex; flex-direction: column; gap: 8px; height: 100%; padding: 26px 24px; background: var(--branco); border: 1px solid var(--linha); border-radius: var(--raio); transition: transform .4s var(--ease), box-shadow .4s var(--ease); }
+.pg-pilares li:hover { transform: translateY(-4px); box-shadow: var(--sombra-hover); }
+.pg-ic { display: grid; place-items: center; width: 50px; height: 50px; border-radius: 16px; background: var(--azul-100); color: var(--azul); margin-bottom: 8px; }
+.pg-ic svg { width: 24px; height: 24px; }
+.pg-pilares h3 { font-size: 1.3rem; margin: 0; }
+.pg-pilares p { margin: 0; font-size: .92rem; color: var(--cinza-600); }
+
+.pg-funciona { background: var(--bege-claro); }
+.pg-funciona-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(32px, 6vw, 80px); align-items: center; }
+@media (max-width: 860px) { .pg-funciona-grid { grid-template-columns: 1fr; } }
+.pg-funciona h2 { font-size: clamp(2rem, 4vw, 2.8rem); }
+.pg-lista { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+.pg-lista li { position: relative; padding-left: 30px; color: var(--cinza-600); }
+.pg-lista li::before { content: ""; position: absolute; left: 0; top: .5em; width: 14px; height: 14px; border-radius: 50%; background: var(--verde-100); box-shadow: inset 0 0 0 4px var(--verde); }
+.pg-lista strong { color: var(--cinza); }
+.pg-versiculo { margin: 0; padding: clamp(24px, 4vw, 40px); border-radius: 24px; background: var(--azul); color: var(--creme); }
+.pg-versiculo p { font: italic 400 clamp(1.1rem, 2vw, 1.35rem)/1.55 var(--f-serif); color: #fff; margin: 0 0 14px; }
+.pg-versiculo cite { font: 600 .74rem/1 var(--f-sans); font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: var(--mostarda); }
+
+.pg-duvidas-grid { display: grid; grid-template-columns: .7fr 1.3fr; gap: clamp(24px, 5vw, 64px); align-items: start; }
+@media (max-width: 860px) { .pg-duvidas-grid { grid-template-columns: 1fr; } }
+.pg-duvidas-grid h2 { font-size: clamp(1.9rem, 3.6vw, 2.6rem); }
+.pg-faq details { border-bottom: 1px solid var(--linha); }
+.pg-faq details:first-child { border-top: 1px solid var(--linha); }
+.pg-faq summary { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding: 20px 0; cursor: pointer; list-style: none; font: 600 1.1rem/1.35 var(--f-serif); }
+.pg-faq summary::-webkit-details-marker { display: none; }
+.pg-faq summary::after { content: "+"; flex: none; display: grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--linha); font: 400 1.2rem/1 var(--f-sans); color: var(--azul); transition: transform .3s var(--ease); }
+.pg-faq details[open] summary::after { transform: rotate(45deg); }
+.pg-faq summary:hover { color: var(--azul); }
+.pg-faq p { margin: 0; padding: 0 44px 20px 0; color: var(--cinza-600); }
+
+.pg-cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 20px 40px; padding: clamp(26px, 4vw, 48px); border-radius: 28px; background: var(--verde); color: var(--creme); }
+.pg-cta h2 { color: #fff; font-size: clamp(1.7rem, 3.2vw, 2.4rem); margin-bottom: 8px; }
+.pg-cta p { margin: 0; color: rgba(242, 237, 228, .88); max-width: 52ch; }

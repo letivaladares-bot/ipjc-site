@@ -1,0 +1,2 @@
+Coloque aqui os PDFs dos boletins hospedados no próprio site (ex.: 2026-10.pdf).
+No admin, use o caminho assets/boletins/2026-10.pdf no campo "arquivo".

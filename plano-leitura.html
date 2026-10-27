@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Plano de Leitura Bíblica — IPJC · Igreja Presbiteriana em Jardim Camburi</title>
+  <meta name="description" content="Plano de leitura da Bíblia em 1 ano da IPJC: leituras diárias do Antigo e do Novo Testamento, com versão para imprimir.">
+  <meta name="theme-color" content="#F2EDE4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Plano de Leitura Bíblica — Dia após dia">
+  <meta property="og:description" content="A Bíblia inteira em um ano, dia após dia. Baixe e imprima.">
+  <meta property="og:image" content="https://www.ipjc.org.br/assets/img/og-ipjc.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IPJC — Igreja Presbiteriana em Jardim Camburi">
+  <link rel="icon" href="assets/img/logo/ipjc-simbolo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/plano-leitura.css">
+  
+
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="js/conteudo.js" defer></script>
+  <script src="js/dados.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/plano-leitura.js" defer></script>
+</head>
+<body data-page="plano-leitura">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div id="site-header"></div>
+
+  <main id="conteudo">
+    <section class="page-hero pl-hero" aria-labelledby="pl-titulo">
+      <div class="calcadao" aria-hidden="true"></div>
+      <div class="container pl-hero-grid">
+        <div>
+          <p class="eyebrow reveal">Plano de leitura bíblica</p>
+          <h1 class="reveal" id="pl-titulo">A Bíblia inteira,<br> <span class="script nowrap">dia após dia</span></h1>
+          <p class="page-lead reveal">Em um ano, você lê toda a Escritura: a cada dia, um trecho do Antigo e um do Novo Testamento. São cerca de 15 minutos por dia.</p>
+          <div class="pl-acoes reveal">
+            <a class="btn btn--mostarda" href="assets/docs/plano-leitura-biblica-ipjc.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+              Baixar PDF para imprimir</a>
+            <a class="btn btn--ghost" href="assets/docs/plano-leitura-biblica-ipjc.pdf" target="_blank" rel="noopener">Ver o PDF</a>
+          </div>
+        </div>
+        <div class="pl-hoje reveal" id="pl-hoje" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="section--tight pl-sec" aria-labelledby="pl-plano-titulo">
+      <div class="container">
+        <div class="pl-topo">
+          <div>
+            <h2 id="pl-plano-titulo">O plano completo</h2>
+            <p class="pl-progresso-txt">Escolha o mês para ver as leituras de cada dia.</p>
+          </div>
+          <div class="pl-topo-acoes">
+            <button class="btn btn--ghost" type="button" id="pl-ir-hoje">Ir para hoje</button>
+          </div>
+        </div>
+
+        <div class="pl-meses" id="pl-meses"></div>
+
+        <blockquote class="pl-versiculo reveal">
+          <p>“Lâmpada para os meus pés é a tua palavra e, luz para os meus caminhos.”</p>
+          <cite>Salmos 119.105</cite>
+        </blockquote>
+      </div>
+    </section>
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

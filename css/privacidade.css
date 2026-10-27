@@ -1,0 +1,22 @@
+/* ==========================================================================
+   IPJC v3 — Política de Privacidade
+   ========================================================================== */
+.priv-grid { display: grid; grid-template-columns: 260px 1fr; gap: clamp(32px, 6vw, 80px); align-items: start; padding-top: clamp(16px, 3vw, 32px); }
+@media (max-width: 860px) { .priv-grid { grid-template-columns: 1fr; } }
+.priv-indice { position: sticky; top: calc(var(--header-h) + 24px); padding: 22px; background: var(--branco); border: 1px solid var(--linha); border-radius: var(--raio); }
+@media (max-width: 860px) { .priv-indice { position: static; } }
+.priv-indice p { margin: 0 0 10px; font-size: .72rem; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; color: var(--borgonha); }
+.priv-indice ol { margin: 0; padding-left: 18px; display: grid; gap: 8px; font-size: .9rem; }
+.priv-indice a { color: var(--cinza); text-decoration: none; }
+.priv-indice a:hover { color: var(--azul); }
+.priv-texto { max-width: 720px; }
+.priv-secao { scroll-margin-top: calc(var(--header-h) + 24px); padding-bottom: 28px; margin-bottom: 28px; border-bottom: 1px solid var(--linha); }
+.priv-secao:last-child { border-bottom: 0; }
+.priv-secao h2 { font-size: clamp(1.4rem, 2.6vw, 1.8rem); }
+.priv-secao p, .priv-secao li { color: var(--cinza-600); }
+.priv-secao ul { padding-left: 20px; display: grid; gap: 6px; }
+.priv-secao strong { color: var(--cinza); }
+.priv-secao h3 { margin: 22px 0 8px; font-size: 1.15rem; }
+.priv-secao ol { padding-left: 22px; display: grid; gap: 8px; }
+.priv-romanos { list-style: upper-roman; }
+.priv-autorizacoes li::marker { color: var(--mostarda); font-weight: 600; }

@@ -1,0 +1,38 @@
+# IPJC v3 — configuração para hospedagem Apache (Locaweb)
+
+# Página de erro
+ErrorDocument 404 /404.html
+
+# Força HTTPS e o endereço com www
+<IfModule mod_rewrite.c>
+  RewriteEngine On
+  RewriteCond %{HTTPS} off [OR]
+  RewriteCond %{HTTP_HOST} !^www\. [NC]
+  RewriteRule ^ https://www.ipjc.org.br%{REQUEST_URI} [L,R=301]
+</IfModule>
+
+# Não deixar listar pastas
+Options -Indexes
+
+# Conteúdo publicado pelo painel: sempre buscar a versão mais nova
+<IfModule mod_headers.c>
+  <FilesMatch "^(conteudo|admin-config)\.js$">
+    Header set Cache-Control "no-cache, must-revalidate"
+  </FilesMatch>
+</IfModule>
+
+# Cache de imagens, fontes, CSS e JS
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType image/png "access plus 30 days"
+  ExpiresByType image/jpeg "access plus 30 days"
+  ExpiresByType image/svg+xml "access plus 30 days"
+  ExpiresByType text/css "access plus 7 days"
+  ExpiresByType application/javascript "access plus 7 days"
+  ExpiresByType application/pdf "access plus 7 days"
+</IfModule>
+
+# Compressão
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/json
+</IfModule>

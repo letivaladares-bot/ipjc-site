@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Painel — IPJC</title>
+  <meta name="theme-color" content="#0F3240">
+  <link rel="icon" href="assets/img/logo/ipjc-simbolo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/blog.css">
+  <link rel="stylesheet" href="css/admin.css">
+
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="js/conteudo.js" defer></script>
+  <script src="js/dados.js" defer></script>
+  <script src="js/admin-config.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/admin.js" defer></script>
+</head>
+<body data-page="admin" class="adm">
+
+  <!-- ============================================================ LOGIN -->
+  <main class="adm-login" id="tela-login">
+    <form class="adm-login-card" id="form-login" novalidate>
+      <img src="assets/img/logo/ipjc-logo.svg" alt="Igreja Presbiteriana em Jardim Camburi" width="220" height="60">
+      <h1>Painel do site</h1>
+      <p>Programações, boletins e blog.</p>
+      <label class="campo"><span>Usuário</span><input type="text" name="usuario" autocomplete="username" required autofocus></label>
+      <label class="campo"><span>Senha</span><input type="password" name="senha" autocomplete="current-password" required></label>
+      <p class="adm-login-erro" id="login-erro" role="alert"></p>
+      <button class="btn" type="submit">Entrar</button>
+      <a class="adm-voltar" href="index.html">← Voltar para o site</a>
+    </form>
+  </main>
+
+  <!-- ============================================================ PAINEL -->
+  <div class="adm-app" id="tela-app" hidden>
+    <header class="adm-topo">
+      <a class="adm-marca" href="index.html" target="_blank" rel="noopener" title="Abrir o site">
+        <img src="assets/img/logo/ipjc-logo-branca.svg" alt="IPJC" width="150" height="40">
+      </a>
+      <span class="adm-topo-titulo">Painel do site</span>
+      <button class="adm-pendente" type="button" id="badge-pendente" hidden></button>
+      <a class="adm-topo-link" href="index.html" target="_blank" rel="noopener">Ver site ↗</a>
+      <button class="adm-topo-link" type="button" id="btn-sair">Sair</button>
+    </header>
+
+    <nav class="adm-nav" aria-label="Seções do painel">
+      <button type="button" class="adm-nav-item" data-secao="programacoes" aria-current="page">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg>
+        Programações <span class="adm-nav-qtd" data-qtd="programacoes"></span>
+      </button>
+      <button type="button" class="adm-nav-item" data-secao="boletins">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+        Boletins <span class="adm-nav-qtd" data-qtd="boletins"></span>
+      </button>
+      <button type="button" class="adm-nav-item" data-secao="blog">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg>
+        Blog <span class="adm-nav-qtd" data-qtd="blog"></span>
+      </button>
+      <button type="button" class="adm-nav-item" data-secao="publicar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5M12 15V3"/></svg>
+        Publicar
+      </button>
+    </nav>
+
+    <main class="adm-main" id="adm-main"></main>
+  </div>
+
+  <div class="adm-toast" id="toast" role="status" aria-live="polite"></div>
+</body>
+</html>

@@ -1,0 +1,69 @@
+/* ==========================================================================
+   IPJC v3 — Boletins (mensais)
+   ========================================================================== */
+
+/* Capa: a imagem real (miniatura do Drive, imagem enviada ou PDF desenhado)
+   fica por cima da capa gerada, que aparece se a real não carregar. */
+.bol-capa-pilha { position: relative; display: grid; border-radius: 14px; overflow: hidden; }
+.bol-capa-pilha > * { grid-area: 1 / 1; }
+.bol-capa { display: block; width: 100%; height: 100%; aspect-ratio: 3 / 4; object-fit: cover; object-position: top; }
+.bol-capa--real { position: relative; z-index: 1; background: var(--branco); }
+canvas.bol-capa--real { opacity: 0; transition: opacity .5s; }
+canvas.bol-capa--real.is-pronto { opacity: 1; }
+.bol-capa--gerada {
+  position: relative; overflow: hidden; display: flex; flex-direction: column; align-items: flex-start;
+  padding: 12% 11%; background: var(--noite); color: var(--creme);
+}
+.bol-capa--gerada::before {   /* calçadão na base da capa */
+  content: ""; position: absolute; left: 0; right: 0; bottom: 0; height: 38%; opacity: .14;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='28' viewBox='0 0 56 28'%3E%3Cpath d='M0 14q14-12 28 0t28 0' fill='none' stroke='%23F2EDE4' stroke-width='3.2'/%3E%3C/svg%3E");
+  background-size: 40px 20px;
+}
+.bol-capa--gerada img { width: 62%; height: auto; }
+.bol-capa-rotulo { margin-top: auto; font-size: .62em; font-weight: 600; letter-spacing: .2em; text-transform: uppercase; color: var(--mostarda); }
+.bol-capa-mes { font: 600 2.1em/1.05 var(--f-serif); margin-top: .15em; }
+.bol-capa-ano { position: relative; font: 400 1em/1.2 var(--f-serif); opacity: .8; }
+
+/* Destaque --------------------------------------------------------------- */
+.bol-recente-sec { padding-top: clamp(40px, 6vw, 64px); }
+.bol-destaque {
+  display: grid; grid-template-columns: 300px 1fr; gap: clamp(28px, 5vw, 64px); align-items: center;
+  padding: clamp(22px, 4vw, 40px); background: var(--branco); border: 1px solid var(--linha); border-radius: 28px;
+}
+.bol-destaque-capa { font-size: 22px; }
+.bol-destaque-capa .bol-capa-pilha { box-shadow: 0 30px 50px -28px rgba(15, 50, 64, .6); transform: rotate(-2deg); transition: transform .5s var(--ease); }
+.bol-destaque:hover .bol-destaque-capa .bol-capa-pilha { transform: rotate(0) translateY(-4px); }
+.bol-destaque-texto h3 { font-size: clamp(1.8rem, 3.6vw, 2.6rem); margin-bottom: 14px; }
+.bol-destaque-data { display: flex; align-items: center; gap: 8px; color: var(--cinza-600); }
+.bol-destaque-data svg { width: 18px; height: 18px; color: var(--azul); }
+.bol-destaque-resumo { color: var(--cinza-600); max-width: 52ch; }
+.bol-destaque .btn { margin-top: 10px; }
+@media (max-width: 700px) {
+  .bol-destaque { grid-template-columns: 1fr; }
+  .bol-destaque-capa { width: min(62%, 240px); font-size: 18px; margin-inline: auto; }
+}
+
+/* Arquivo do ano --------------------------------------------------------- */
+#bol-lista.is-entrando { animation: bol-entra .5s var(--ease); }
+@keyframes bol-entra { from { opacity: 0; transform: translateY(10px); } }
+.bol-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px 24px; }
+@media (max-width: 1000px) { .bol-grid { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 640px) { .bol-grid { grid-template-columns: 1fr 1fr; gap: 24px 14px; } }
+
+.bol-card { position: relative; display: flex; flex-direction: column; gap: 12px; text-decoration: none; color: var(--cinza); }
+.bol-capa-wrap { font-size: 16px; border-radius: 14px; transition: transform .4s var(--ease), box-shadow .4s var(--ease); box-shadow: var(--sombra); }
+@media (max-width: 640px) { .bol-capa-wrap { font-size: 12px; } }
+a.bol-card:hover .bol-capa-wrap { transform: translateY(-6px); box-shadow: var(--sombra-hover); }
+.bol-info { display: flex; flex-direction: column; gap: 2px; }
+.bol-data { font-size: .72rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--borgonha); }
+.bol-card h3 { font: 600 1.08rem/1.3 var(--f-serif); margin: 0; transition: color .25s; }
+a.bol-card:hover h3 { color: var(--azul); }
+.bol-abrir {
+  position: absolute; top: 10px; right: 10px; z-index: 1; display: grid; place-items: center; width: 34px; height: 34px;
+  border-radius: 50%; background: var(--creme); color: var(--azul); opacity: 0; transform: scale(.8);
+  transition: opacity .3s, transform .3s var(--ease);
+}
+.bol-abrir svg { width: 16px; height: 16px; }
+a.bol-card:hover .bol-abrir, a.bol-card:focus-visible .bol-abrir { opacity: 1; transform: none; }
+@media (hover: none) { .bol-abrir { opacity: 1; transform: none; } }
+.bol-card--sem-link { opacity: .7; }

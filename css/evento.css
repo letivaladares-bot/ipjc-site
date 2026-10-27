@@ -1,0 +1,59 @@
+/* ==========================================================================
+   IPJC v3 — Página de uma programação (evento.html)
+   Usa as cores por categoria (--cor / --cor-fundo) de programacoes.css.
+   ========================================================================== */
+
+.ev-hero {
+  position: relative; overflow: hidden;
+  padding-block: clamp(40px, 7vw, 80px) clamp(36px, 5vw, 56px);
+  background: radial-gradient(55% 80% at 100% 0%, var(--cor-fundo, var(--azul-100)), transparent 70%), var(--creme);
+}
+.ev-hero .calcadao { left: 0; right: 0; bottom: 0; height: 64px; opacity: .07;
+  -webkit-mask-image: linear-gradient(to top, #000, transparent); mask-image: linear-gradient(to top, #000, transparent); }
+.ev-hero .container { position: relative; }
+.ev-hero h1 { font-size: clamp(2.2rem, 5vw, 3.8rem); max-width: 22ch; margin-bottom: 18px; }
+.ev-quando { display: flex; align-items: center; gap: 10px; margin: 0; font-size: clamp(1rem, 1.6vw, 1.15rem); color: var(--cinza-600); }
+.ev-quando svg { width: 20px; height: 20px; color: var(--cor, var(--azul)); flex: none; }
+.ev-aviso {
+  display: inline-block; margin: 0 0 18px; padding: 10px 16px; border-radius: 12px;
+  background: var(--mostarda-100); color: var(--mostarda-600); font-size: .9rem; font-weight: 500;
+}
+
+.ev-grid { display: grid; grid-template-columns: .9fr 1.1fr; gap: clamp(28px, 5vw, 64px); align-items: start; }
+@media (max-width: 860px) { .ev-grid { grid-template-columns: 1fr; } }
+
+.ev-visual { position: sticky; top: calc(var(--header-h) + 24px); }
+@media (max-width: 860px) { .ev-visual { position: static; max-width: 520px; } }
+.ev-arte { width: 100%; height: auto; aspect-ratio: 1; object-fit: cover; border-radius: 24px; box-shadow: var(--sombra-hover); }
+.ev-data-grande {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; aspect-ratio: 1;
+  border-radius: 24px; background: var(--cor-fundo, var(--azul-100)); color: var(--cor, var(--azul)); text-align: center;
+}
+.ev-data-grande .dia { font: 600 clamp(6rem, 14vw, 9rem)/1 var(--f-serif); }
+.ev-data-grande .mes { font: 400 clamp(1.4rem, 2.4vw, 1.8rem)/1.2 var(--f-serif); text-transform: capitalize; }
+.ev-data-grande .ano { font-size: .9rem; letter-spacing: .2em; opacity: .7; margin-top: 6px; }
+@media (max-width: 860px) { .ev-data-grande { aspect-ratio: 16 / 9; } .ev-data-grande .dia { font-size: 5rem; } }
+
+.ev-info { list-style: none; margin: 0; padding: 8px 28px; background: var(--branco); border: 1px solid var(--linha); border-radius: var(--raio); }
+.ev-info li { display: grid; grid-template-columns: 44px 1fr; gap: 16px; align-items: center; padding: 18px 0; }
+.ev-info li + li { border-top: 1px solid var(--linha); }
+.ev-info strong { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: var(--cinza-600); margin-bottom: 2px; }
+.ev-info li > span:last-child { font-size: 1.02rem; color: var(--cinza); }
+.ev-info small { font-size: .85rem; color: var(--cinza-600); }
+.ev-info a { color: var(--azul); }
+.ev-info-ic { display: grid; place-items: center; width: 44px; height: 44px; border-radius: 12px; background: var(--cor-fundo, var(--creme)); color: var(--cor, var(--azul)); }
+.ev-info-ic svg { width: 20px; height: 20px; }
+
+.ev-acoes { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 24px; }
+.ev-acoes-sec { display: flex; flex-wrap: wrap; gap: 4px 18px; width: 100%; }
+.ev-link {
+  display: inline-flex; align-items: center; gap: 8px; padding: 8px 0; border: 0; background: none; cursor: pointer;
+  font: 500 .88rem/1 var(--f-sans); color: var(--cinza-600); text-decoration: underline; text-underline-offset: 3px;
+}
+.ev-link svg { width: 16px; height: 16px; }
+.ev-link:hover { color: var(--azul); }
+
+.ev-desc { margin-top: 36px; }
+.ev-desc h2 { font-size: 1.5rem; }
+.ev-desc p { color: var(--cinza-600); font-size: 1.05rem; max-width: 62ch; }
+

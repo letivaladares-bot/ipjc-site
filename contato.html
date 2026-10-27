@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contato — IPJC · Igreja Presbiteriana em Jardim Camburi</title>
+  <meta name="description" content="Fale com a Igreja Presbiteriana em Jardim Camburi: mensagens, pedidos de oração e cadastro de visitantes. WhatsApp, e-mail e endereço.">
+  <meta name="theme-color" content="#F2EDE4">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Contato — IPJC · Igreja Presbiteriana em Jardim Camburi">
+  <meta property="og:description" content="Fale com a Igreja Presbiteriana em Jardim Camburi: mensagens, pedidos de oração e cadastro de visitantes. WhatsApp, e-mail e endereço.">
+  <meta property="og:image" content="https://www.ipjc.org.br/assets/img/og-ipjc.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="IPJC — Igreja Presbiteriana em Jardim Camburi">
+  <link rel="icon" href="assets/img/logo/ipjc-simbolo.svg" type="image/svg+xml">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Poppins:wght@300;400;500;600;700&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;0,8..60,700;1,8..60,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/contato.css">
+
+  <script>document.documentElement.classList.add('js')</script>
+  <script src="js/conteudo.js" defer></script>
+  <script src="js/dados.js" defer></script>
+  <script src="js/site.js" defer></script>
+  <script src="js/contato.js" defer></script>
+</head>
+<body data-page="contato">
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+  <div id="site-header"></div>
+
+  <main id="conteudo">
+
+    <section class="page-hero" aria-labelledby="ct-titulo">
+      <div class="calcadao" aria-hidden="true"></div>
+      <div class="container">
+        <p class="eyebrow reveal">Contato</p>
+        <h1 class="reveal" id="ct-titulo">Vamos <span class="script nowrap">conversar?</span></h1>
+        <p class="page-lead reveal">Mande uma mensagem, deixe seu pedido de oração ou conte que você nos visitou. Vamos responder com carinho.</p>
+      </div>
+    </section>
+
+    <section class="section--tight ct-sec" aria-label="Formulários e canais de contato">
+      <div class="container ct-grid">
+
+        <div class="ct-forms reveal">
+          <div class="abas" role="tablist" aria-label="Tipo de contato">
+            <button class="aba" role="tab" type="button" id="aba-fale" aria-controls="painel-fale" aria-selected="true" data-hash="fale-conosco">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/></svg>Fale conosco
+            </button>
+            <button class="aba" role="tab" type="button" id="aba-oracao" aria-controls="painel-oracao" aria-selected="false" tabindex="-1" data-hash="oracao">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M19 14c1.5-1.5 3-3.2 3-5.5A5.5 5.5 0 0 0 16.5 3c-1.8 0-3 .5-4.5 2-1.5-1.5-2.7-2-4.5-2A5.5 5.5 0 0 0 2 8.5c0 2.3 1.5 4 3 5.5l7 7Z"/></svg>Pedido de oração
+            </button>
+            <button class="aba" role="tab" type="button" id="aba-visitante" aria-controls="painel-visitante" aria-selected="false" tabindex="-1" data-hash="visitante">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M19 8v6M22 11h-6"/></svg>Sou visitante
+            </button>
+          </div>
+
+          <!-- Fale conosco -->
+          <div class="painel" role="tabpanel" id="painel-fale" aria-labelledby="aba-fale">
+            <form class="form" data-tipo="fale" novalidate>
+              <p class="form-intro">Dúvidas, sugestões ou qualquer assunto: escreva para a gente.</p>
+              <div class="campos-2">
+                <label class="campo"><span>Nome <em>*</em></span><input type="text" name="Nome" required autocomplete="name"></label>
+                <label class="campo"><span>E-mail <em>*</em></span><input type="email" name="email" required autocomplete="email"></label>
+              </div>
+              <div class="campos-2">
+                <label class="campo"><span>Telefone / WhatsApp</span><input type="tel" name="Telefone" autocomplete="tel" inputmode="tel"></label>
+                <label class="campo"><span>Assunto</span>
+                  <select name="Assunto">
+                    <option>Dúvida geral</option><option>Ministérios</option><option>Programações</option>
+                    <option>Batismo / membresia</option><option>Casamento</option><option>Aconselhamento pastoral</option><option>Outro</option>
+                  </select>
+                </label>
+              </div>
+              <label class="campo"><span>Mensagem <em>*</em></span><textarea name="Mensagem" rows="5" required></textarea></label>
+          <label class="campo-check">
+            <input type="checkbox" name="Consentimento LGPD" value="Sim" required id="fale-lgpd">
+            <span>Autorizo a IPJC a usar estes dados apenas para responder a este contato, conforme a <a href="privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+          </label>
+          <input type="text" name="_honey" class="campo-mel" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-acoes">
+            <button class="btn" type="submit"><span class="rotulo">Enviar mensagem</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+            </form>
+          </div>
+
+          <!-- Pedido de oração -->
+          <div class="painel" role="tabpanel" id="painel-oracao" aria-labelledby="aba-oracao" hidden>
+            <form class="form" data-tipo="oracao" novalidate>
+              <p class="form-intro">“Orai uns pelos outros” (Tiago 5.16). Seu pedido será recebido pela liderança pastoral e tratado com cuidado e discrição.</p>
+              <label class="campo"><span>Nome <small>(opcional)</small></span><input type="text" name="Nome" autocomplete="name" placeholder="Pode deixar em branco, se preferir"></label>
+              <label class="campo"><span>Pedido de oração <em>*</em></span><textarea name="Pedido" rows="6" required></textarea></label>
+              <label class="campo"><span>Contato <small>(opcional — telefone ou e-mail, se quiser retorno)</small></span><input type="text" name="Contato" autocomplete="off"></label>
+              <label class="campo-check">
+                <input type="checkbox" name="Confidencial" value="Sim, compartilhar apenas com o pastor">
+                <span>Este pedido é confidencial (apenas para o pastor).</span>
+              </label>
+          <label class="campo-check">
+            <input type="checkbox" name="Consentimento LGPD" value="Sim" required id="oracao-lgpd">
+            <span>Autorizo a IPJC a usar estes dados apenas para responder a este contato, conforme a <a href="privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+          </label>
+          <input type="text" name="_honey" class="campo-mel" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-acoes">
+            <button class="btn" type="submit"><span class="rotulo">Enviar pedido</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+            </form>
+          </div>
+
+          <!-- Visitante -->
+          <div class="painel" role="tabpanel" id="painel-visitante" aria-labelledby="aba-visitante" hidden>
+            <form class="form" data-tipo="visitante" novalidate>
+              <p class="form-intro">Que alegria ter você conosco! Deixe seus dados para que possamos conhecer você melhor.</p>
+              <div class="campos-2">
+                <label class="campo"><span>Nome <em>*</em></span><input type="text" name="Nome" required autocomplete="name"></label>
+                <label class="campo"><span>WhatsApp <em>*</em></span><input type="tel" name="WhatsApp" required autocomplete="tel" inputmode="tel"></label>
+              </div>
+              <div class="campos-2">
+                <label class="campo"><span>E-mail</span><input type="email" name="email" autocomplete="email"></label>
+                <label class="campo"><span>Bairro / cidade</span><input type="text" name="Bairro" autocomplete="address-level2"></label>
+              </div>
+              <fieldset class="campo-grupo">
+                <legend>Já nos visitou?</legend>
+                <label class="pilula"><input type="radio" name="Visita" value="Ainda não, pretendo visitar" checked><span>Ainda não, pretendo ir</span></label>
+                <label class="pilula"><input type="radio" name="Visita" value="Culto das 9h"><span>Fui ao culto das 9h</span></label>
+                <label class="pilula"><input type="radio" name="Visita" value="Culto das 18h30"><span>Fui ao culto das 18h30</span></label>
+              </fieldset>
+              <fieldset class="campo-grupo">
+                <legend>Gostaria de…</legend>
+                <label class="pilula"><input type="checkbox" name="Interesse" value="Receber uma visita/ligação"><span>Receber um contato</span></label>
+                <label class="pilula"><input type="checkbox" name="Interesse" value="Conhecer os ministérios"><span>Conhecer os ministérios</span></label>
+                <label class="pilula"><input type="checkbox" name="Interesse" value="Ministério Infantil (tenho filhos)"><span>Ministério Infantil</span></label>
+                <label class="pilula"><input type="checkbox" name="Interesse" value="Estudar a Bíblia / EBD"><span>Estudar a Bíblia</span></label>
+              </fieldset>
+              <label class="campo"><span>Como conheceu a IPJC?</span>
+                <select name="Como conheceu">
+                  <option value="">Selecione</option><option>Amigos ou família</option><option>Instagram / redes sociais</option>
+                  <option>YouTube</option><option>Passei em frente</option><option>Pesquisa na internet</option><option>Outro</option>
+                </select>
+              </label>
+              <label class="campo"><span>Mensagem</span><textarea name="Mensagem" rows="3"></textarea></label>
+          <label class="campo-check">
+            <input type="checkbox" name="Consentimento LGPD" value="Sim" required id="visitante-lgpd">
+            <span>Autorizo a IPJC a usar estes dados apenas para responder a este contato, conforme a <a href="privacidade.html" target="_blank">Política de Privacidade</a>.</span>
+          </label>
+          <input type="text" name="_honey" class="campo-mel" tabindex="-1" autocomplete="off" aria-hidden="true">
+          <div class="form-acoes">
+            <button class="btn" type="submit"><span class="rotulo">Enviar</span></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+            </form>
+          </div>
+        </div>
+
+        <!-- Canais -->
+        <aside class="ct-canais reveal" aria-label="Outros canais" style="--delay:.1s">
+          <a class="ct-whats" id="ct-whats" href="#">
+            <span class="ct-whats-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"/><path d="M9 9.5c0 3 2.5 5.5 5.5 5.5l1-1.5-2-1-1 1c-1-.4-2-1.4-2.4-2.4l1-1-1-2L9 9.5"/></svg></span>
+            <span><small>Resposta mais rápida</small><strong>WhatsApp</strong><span data-ipjc="contato.whatsapp"></span></span>
+          </a>
+          <ul class="ct-lista">
+            <li><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
+              <span><strong>E-mail</strong><a id="ct-email" href="#" data-ipjc="contato.email"></a></span></li>
+            <li><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></span>
+              <span><strong>Endereço</strong><a data-ipjc-href="igreja.endereco.mapa" href="#"><span data-ipjc="igreja.endereco.rua"></span><br>Jardim Camburi, Vitória/ES</a></span></li>
+            <li><span class="ct-ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
+              <span><strong>Domingos</strong><span data-ipjc="cultos.resumo"></span><br><span data-ipjc="cultos.ebd"></span></span></li>
+          </ul>
+          <a class="ct-membro" href="membro.html">
+            <span><small>Faça parte</small><strong>Quero ser membro</strong></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a class="ct-membro ct-membro--alt" href="contribua.html">
+            <span><small>Pix e transferência</small><strong>Dízimos e ofertas</strong></span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <div class="ct-redes" id="ct-redes"></div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section--tight ct-mapa-sec" aria-labelledby="ct-mapa-titulo">
+      <div class="container">
+        <div class="ev-mapa-topo">
+          <div><p class="eyebrow">Como chegar</p><h2 id="ct-mapa-titulo">Venha nos visitar</h2><p class="ev-endereco" id="ct-endereco"></p></div>
+          <div class="ev-mapa-links" id="ct-mapa-links"></div>
+        </div>
+        <div class="ev-mapa reveal" id="ct-mapa"></div>
+      </div>
+    </section>
+
+  </main>
+
+  <div id="site-footer"></div>
+</body>
+</html>

@@ -1,0 +1,44 @@
+/* ==========================================================================
+   IPJC v3 — Plano de leitura bíblica (tela e impressão)
+   ========================================================================== */
+.pl-hero-grid { position: relative; display: grid; grid-template-columns: 1.2fr .8fr; gap: clamp(28px, 5vw, 64px); align-items: center; }
+@media (max-width: 900px) { .pl-hero-grid { grid-template-columns: 1fr; } }
+.pl-acoes { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+
+.pl-hoje { padding: 26px 28px; border-radius: 24px; background: var(--azul); color: var(--creme); box-shadow: 0 24px 50px -24px rgba(15, 50, 64, .55); }
+.pl-hoje .eyebrow { color: var(--mostarda); margin-bottom: 14px; }
+.pl-hoje-leituras { display: grid; gap: 14px; margin-bottom: 18px; }
+.pl-hoje-leituras small { display: block; font-size: .7rem; font-weight: 600; letter-spacing: .12em; text-transform: uppercase; color: rgba(242, 237, 228, .7); }
+.pl-hoje-leituras strong { font: 600 clamp(1.5rem, 3vw, 2rem)/1.15 var(--f-serif); color: #fff; }
+.pl-livre { margin: 0; font: 600 1.3rem/1.3 var(--f-serif); color: #fff; }
+
+.pl-sec { padding-top: clamp(40px, 6vw, 64px); }
+.pl-topo { margin-bottom: 24px !important; display: flex; flex-wrap: wrap; align-items: end; justify-content: space-between; gap: 16px; margin-bottom: 14px; }
+.pl-topo h2 { font-size: clamp(1.6rem, 3vw, 2.1rem); margin: 0 0 4px; }
+.pl-progresso-txt { margin: 0; color: var(--cinza-600); font-size: .92rem; }
+.pl-topo-acoes { display: flex; align-items: center; gap: 14px; }
+
+
+.pl-meses { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; align-items: start; }
+@media (max-width: 860px) { .pl-meses { grid-template-columns: 1fr; } }
+.pl-mes { background: var(--branco); border: 1px solid var(--linha); border-radius: 18px; overflow: hidden; }
+.pl-mes summary { display: flex; align-items: center; gap: 12px; padding: 16px 20px; cursor: pointer; list-style: none; }
+.pl-mes summary::-webkit-details-marker { display: none; }
+.pl-mes summary::after { content: ""; width: 9px; height: 9px; margin-left: auto; border-right: 2px solid var(--cinza-400); border-bottom: 2px solid var(--cinza-400); transform: rotate(45deg) translateY(-3px); transition: transform .3s var(--ease); }
+.pl-mes[open] summary::after { transform: rotate(-135deg); }
+.pl-mes-nome { font: 600 1.25rem/1 var(--f-serif); text-transform: capitalize; }
+
+.pl-dias { list-style: none; margin: 0; padding: 0 10px 12px; }
+.pl-dia { display: grid; grid-template-columns: 30px 1fr auto; gap: 10px; align-items: center; padding: 8px 10px; border-radius: 10px; }
+.pl-dia:nth-child(even) { background: #FBF9F5; }
+.pl-tag-hoje { padding: 2px 8px; border-radius: 999px; background: var(--mostarda); color: var(--grafite); font-size: .66rem; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; }
+.pl-data { font: 600 .95rem/1 var(--f-serif); color: var(--borgonha); text-align: right; }
+.pl-leituras { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; font-size: .9rem; }
+.pl-dia.is-hoje { background: var(--mostarda-100); box-shadow: inset 3px 0 0 var(--mostarda); }
+
+.pl-versiculo { margin: clamp(36px, 5vw, 56px) auto 0; max-width: 640px; text-align: center; }
+.pl-versiculo p { font: italic 400 clamp(1.2rem, 2.4vw, 1.5rem)/1.5 var(--f-serif); margin: 0 0 10px; }
+.pl-versiculo cite { font: 600 .74rem/1 var(--f-sans); font-style: normal; letter-spacing: .14em; text-transform: uppercase; color: var(--borgonha); }
+
+/* Impressão: a versão oficial é o PDF (assets/docs/plano-leitura-biblica-ipjc.pdf) */
+@media print { .site-header, .site-footer, .pl-acoes, .pl-topo-acoes { display: none !important; } .js .reveal { opacity: 1 !important; transform: none !important; } }
